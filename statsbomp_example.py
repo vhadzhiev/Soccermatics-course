@@ -9,21 +9,26 @@ Created on Sun Feb 26 10:22:14 2023
 from mplsoccer import Sbopen
 parser = Sbopen()
 
+# check the available competitions
 df_competition = parser.competition()
 df_competition.info()
 
-df_match = parser.match(competition_id=72, season_id=30)
+# select games from WC 2018
+df_match = parser.match(competition_id=43, season_id=3)
 df_match.info()
 
-df_lineup= parser.lineup(69301)
+# select lineups from Portugal - Spain match
+df_lineup= parser.lineup(7576)
 df_lineup.info()
 
-df_event, df_related, df_freeze, df_tactics = parser.event(69301)
+# select additional info for the match
+df_event, df_related, df_freeze, df_tactics = parser.event(7576)
 df_event.info()
 df_related.info()
 df_freeze.info()
 df_tactics.info()
 
+# 360 data not available yet, so just picked a random match
 df_frame, df_visible = parser.frame(3788741)
 df_frame.info()
 df_visible.info()
