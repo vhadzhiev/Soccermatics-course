@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 from mplsoccer import Pitch, Sbopen, VerticalPitch
 
 parser = Sbopen()
@@ -79,4 +78,13 @@ for i, row in df_spain.iterrows():
                       ax=ax['pitch'])
 
 fig.suptitle("Portugal (red) and Spain (blue) shots", fontsize=30)
+plt.show()
+
+# Plotting shots on one half
+pitch = VerticalPitch(line_color='black', half=True)
+fig, ax = pitch.grid(grid_height=0.9, title_height=0.06, axis=False,
+                     endnote_height=0.04, title_space=0, endnote_space=0)
+# plotting all shots
+pitch.scatter(df_portugal.x, df_portugal.y, alpha=1, s=500, color="red", ax=ax['pitch'], edgecolors="black")
+fig.suptitle("Portugal shots against Spain", fontsize=30)
 plt.show()
