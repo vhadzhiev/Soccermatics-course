@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Feb 26 10:22:14 2023
-
-@author: USER
-"""
-
 # Sbopen loads data from the StatsBomb open-data
 from mplsoccer import Sbopen
 parser = Sbopen()

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Feb 26 12:25:03 2023
-
-@author: USER
-"""
-
 import pandas as pd
 import json
 import warnings
